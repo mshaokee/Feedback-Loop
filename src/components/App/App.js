@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import './App.css';
 
 class App extends Component {
@@ -10,10 +10,10 @@ class App extends Component {
           <h1 className="App-title">Feedback!</h1>
           <h4><i>Don't forget it!</i></h4>
         </header>
-        <br/>
+        
       </div>
-    );
-  }
-}
+    );//end return
+  };//end render
+};//end class
 
 export default App;
