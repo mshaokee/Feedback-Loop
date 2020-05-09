@@ -21,7 +21,7 @@ class App extends Component {
   componentDidMount() {
     //check if this.props is working properly!
     this.getFeedback();
-    console.log('componentDidMount', this.props);
+    console.log('componentDidMount');
   }
 
   getFeedback = () => {
@@ -41,8 +41,8 @@ class App extends Component {
 
 render() {
   //confirm that DB is connecting
-  console.log(this.state.feedback);
-  
+  console.log('what DB has currently', this.state.feedback);
+
   return (
     <div className="App">
       {/* NEED HASHROUTER TO WRAP MY ROUTES */}

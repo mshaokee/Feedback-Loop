@@ -7,11 +7,22 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
 //set initalstate which will be an array 
-const reducerInitialState = [];
+const reducerInitialState = {
+    feeling: [],
+    understanding: [],
+    support: [],
+    comments: []
+}
 
 //set myReducer function for state
 const myReducer = (state = reducerInitialState, action) => {
-    console.log('in myReducer', state, action);   
+    console.log('in myReducer store', state, action);
+    if(action.type === 'feeling'){
+        console.log('in myReducer feeling: ', action.payload);
+        state.feeling = [...state.feeling, action.payload]
+        console.log('in myReducer NOW: ', state);
+        return state.feeling;
+    }
     return state;
 };//end myReducer
 
