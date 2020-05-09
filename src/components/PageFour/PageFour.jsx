@@ -14,8 +14,8 @@ class PageFour extends Component {
         return (
             <div>
                 <h1>Any comments you want to leave?</h1>
-                <input type="number" placeholder="Comments?" />
-                <button>Next</button>
+                <input type="text" placeholder="Comments?" />
+                <button onClick={this.handleClick}>Next</button>
             </div>
         );//end return
     };//end render
