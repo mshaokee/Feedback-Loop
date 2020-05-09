@@ -23,14 +23,17 @@ class PageOne extends Component {
 
     handleClick = () => {
         console.log('pageOne Clicked');
-        //when next is clicked, will go to page two
-        this.props.history.push('/pagetwo')
-        //need to send data back to redux
-        this.props.dispatch({
-            type: 'feeling',
-            payload: this.state.feeling
-        })
-
+        if (this.state.feeling < 0 || this.state.feeling > 10 || this.state.feeling === ''){
+            alert('please insert a number from 1 through 10')
+        } else {
+            //need to send data back to redux
+            this.props.dispatch({
+                type: 'feeling',
+                payload: this.state.feeling
+            })
+            //when next is clicked, will go to page two
+            this.props.history.push('/pagetwo')
+        }
     };//end handleClick
     
     render() {
