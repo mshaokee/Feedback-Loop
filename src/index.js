@@ -33,7 +33,7 @@ const myReducer = (state = reducerInitialState, action) => {
          return { ...state, support: action.payload}
     }
     if (action.type === 'comments') {
-        console.log('in myReducer understcommentsanding:', action.payload);
+        console.log('in myReducer comments:', action.payload);
         //spread to not mutate and directly change understanding through return
         return { ...state, comments: action.payload }
     }

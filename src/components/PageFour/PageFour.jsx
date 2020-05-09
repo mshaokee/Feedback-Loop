@@ -11,9 +11,9 @@ class PageFour extends Component {
     }
 
     handleClick = () => {
-        console.log('pageTwo Clicked');
+        console.log('pageFour Clicked');
             this.props.dispatch({
-                type: 'support',
+                type: 'comments',
                 payload: this.state.comments
             })
             this.props.history.push('/review')
@@ -23,7 +23,7 @@ class PageFour extends Component {
         console.log('in handleChange PAGE TWO', event.target.value);
         //change state
         this.setState({
-            ...this.state.support,
+            ...this.state.comments,
             [property]: event.target.value
         })
     };//end handleChange

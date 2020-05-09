@@ -73,7 +73,8 @@ render() {
 
         <Route path="/review"
           render={(props) => <Review {...props}
-            dispatch={this.props.dispatch} />} />
+            dispatch={this.props.dispatch} 
+            review={this.props.reduxState} />} />
 
         <Route path="/feedback"
           render={(props) => <Feedback {...props}

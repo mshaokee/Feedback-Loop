@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Review extends Component {
     componentDidMount() {
-        console.log('Review Mounted');
+        console.log('Review Mounted', this.props.review);
     }
 
     handleClick = () => {
@@ -13,7 +13,7 @@ class Review extends Component {
     render() {
         return (
             <div>
-                <h1>Review Page</h1>
+                <h1>Review Your Feedback!</h1>
               
                 <button onClick={this.handleClick}>Submit</button>
             </div>

@@ -11,7 +11,7 @@ class PageThree extends Component {
     }
 
     handleClick = () => {
-        console.log('pageTwo Clicked');
+        console.log('pageThree Clicked');
         if (this.state.support < 0 || this.state.support > 10 || this.state.support === '') {
             alert('please insert a number from 1 through 10')
         } else {
