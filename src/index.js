@@ -7,8 +7,9 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
 //set initalstate which will be an array 
-const reducerInitialState = 0;
+const reducerInitialState = [];
 
+//set myReducer function for state
 const myReducer = (state = reducerInitialState, action) => {
     console.log('in myReducer', state, action);   
     return state;
@@ -17,6 +18,7 @@ const myReducer = (state = reducerInitialState, action) => {
 const myStore = createStore(myReducer);
 
 ReactDOM.render(
+    // allow App.js to collect store info
     <Provider store={myStore}>
     <App />
     </Provider>,

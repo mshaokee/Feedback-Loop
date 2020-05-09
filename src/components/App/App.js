@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import { connect } from 'react-redux';
 import './App.css';
 import { HashRouter, Route } from 'react-router-dom';
@@ -14,45 +14,68 @@ import Feedback from '../Feedback/Feedback';
 
 class App extends Component {
 
+  state = {
+    feedback: []
+  }
+
   componentDidMount() {
+    //check if this.props is working properly!
+    this.getFeedback();
     console.log('componentDidMount', this.props);
   }
 
-  render() {
-    return (
-      <div className="App">
-        <HashRouter>
-          <Header />
-          <Route exact path="/"
-            render={(props) => <PageOne {...props}
-              dispatch={this.props.dispatch} />} />
+  getFeedback = () => {
+    console.log('in getFeedback');
+    //axios GET request
+    axios.get('/api/information').then((response) => {
+      //setState to information from server
+      this.setState({
+        feedback: response.data
+      })//end setState
+    }).catch((error) => {
+      alert('Error Get, check console.');
+      console.log(error);
+    });//end axios -- need to run server side
 
-          <Route path="/pagetwo"
-            render={(props) => <PageTwo {...props}
-              dispatch={this.props.dispatch} />} />
+};//end getFeedback
 
-          <Route path="/pagethree"
-            render={(props) => <PageThree {...props}
-              dispatch={this.props.dispatch} />} />
+render() {
+  return (
+    <div className="App">
+      {/* NEED HASHROUTER TO WRAP MY ROUTES */}
+      <HashRouter>
+        <Header />
+        {/* WHEN DIRECTING PATH WITH DISPATCH, SET PROPS */}
+        <Route exact path="/"
+          render={(props) => <PageOne {...props}
+            dispatch={this.props.dispatch} />} />
 
-          <Route path="/pagefour"
-            render={(props) => <PageFour {...props}
-              dispatch={this.props.dispatch} />} />
+        <Route path="/pagetwo"
+          render={(props) => <PageTwo {...props}
+            dispatch={this.props.dispatch} />} />
 
-          <Route path="/review"
-            render={(props) => <Review {...props}
-              dispatch={this.props.dispatch} />} />
+        <Route path="/pagethree"
+          render={(props) => <PageThree {...props}
+            dispatch={this.props.dispatch} />} />
 
-          <Route path="/feedback"
-            render={(props) => <Feedback {...props}
-              dispatch={this.props.dispatch} />} />
+        <Route path="/pagefour"
+          render={(props) => <PageFour {...props}
+            dispatch={this.props.dispatch} />} />
 
-        </HashRouter>
-      </div>
-    );//end return
-  };//end render
+        <Route path="/review"
+          render={(props) => <Review {...props}
+            dispatch={this.props.dispatch} />} />
+
+        <Route path="/feedback"
+          render={(props) => <Feedback {...props}
+            dispatch={this.props.dispatch} />} />
+      </HashRouter>
+    </div>
+  );//end return
+};//end render
 };//end class
 
+//this allows connect to work with redux
 const reduxStateToProps = (reduxState) => ({ reduxState });
 
 export default connect(reduxStateToProps)(App);
