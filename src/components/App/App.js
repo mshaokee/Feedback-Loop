@@ -40,6 +40,9 @@ class App extends Component {
 };//end getFeedback
 
 render() {
+  //confirm that DB is connecting
+  console.log(this.state.feedback);
+  
   return (
     <div className="App">
       {/* NEED HASHROUTER TO WRAP MY ROUTES */}
