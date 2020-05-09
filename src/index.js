@@ -8,10 +8,10 @@ import {Provider} from 'react-redux';
 
 //set initalstate which will be an array 
 const reducerInitialState = {
-    feeling: [],
-    understanding: [],
-    support: [],
-    comments: []
+    feeling: '',
+    understanding: '',
+    support: '',
+    comments: ''
 }
 
 //set myReducer function for state
@@ -19,9 +19,13 @@ const myReducer = (state = reducerInitialState, action) => {
     console.log('in myReducer store', state, action);
     if(action.type === 'feeling'){
         console.log('in myReducer feeling: ', action.payload);
-        state.feeling = [...state.feeling, action.payload]
-        console.log('in myReducer NOW: ', state);
-        return state.feeling;
+        // return feeling to change directly
+        return {feeling: action.payload};
+    }
+    if(action.type === 'understand'){
+        console.log('in myReducer understanding:', action.payload);
+        //spread to not mutate and directly change understanding through return
+        return {...state, understanding: action.payload}
     }
     return state;
 };//end myReducer

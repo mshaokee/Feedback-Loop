@@ -12,7 +12,7 @@ class PageOne extends Component {
     }
 
     handleChange = (event, property) => {
-        console.log('in handleChange', event.target.value);
+        console.log('in handleChange PAGE ONE', event.target.value);
         //change state so we can send back
         this.setState({
             //do not mutate state with spread
