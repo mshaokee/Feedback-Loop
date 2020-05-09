@@ -32,7 +32,7 @@ class PageFour extends Component {
         return (
             <div>
                 <h1>Any comments you want to leave?</h1>
-                <input onClick={(event) => this.handleChange(event, 'comments')} type="text" placeholder="Comments?" />
+                <input onChange={(event) => this.handleChange(event, 'comments')} type="text" placeholder="Comments?" />
                 <button onClick={this.handleClick}>Next</button>
             </div>
         );//end return
