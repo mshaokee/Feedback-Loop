@@ -39,7 +39,7 @@ class App extends Component {
 
 };//end getFeedback
 
-//need to verify my current redux state
+// //need to verify my current redux state
 buttonClick = () =>{
   console.log('in buttonClick', this.props.reduxState);
 }//end buttonClick
