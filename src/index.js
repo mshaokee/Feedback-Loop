@@ -27,7 +27,16 @@ const myReducer = (state = reducerInitialState, action) => {
         //spread to not mutate and directly change understanding through return
         return {...state, understanding: action.payload}
     }
-    return state;
+     if(action.type === 'support'){
+         console.log('in myReducer support:', action.payload);
+        //spread to not mutate and directly change understanding through return
+         return { ...state, support: action.payload}
+    }
+    if (action.type === 'comments') {
+        console.log('in myReducer understcommentsanding:', action.payload);
+        //spread to not mutate and directly change understanding through return
+        return { ...state, comments: action.payload }
+    }
 };//end myReducer
 
 const myStore = createStore(myReducer);
