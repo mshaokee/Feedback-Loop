@@ -7,6 +7,9 @@ class Feedback extends Component {
 
     handleClick = () => {
         console.log('Feedback Clicked');
+        this.props.dispatch({
+            type: 'reset'
+        })
         this.props.history.push('/')
     };//end handleClick
 

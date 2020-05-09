@@ -48,8 +48,10 @@ const myReducer = (state = reducerInitialState, action) => {
             alert('Error Post redux');
             console.log(error);
         });//end axios  
-    };// end submit
-    return state;
+    } else if(action.type === 'reset'){
+        console.log('reset data');
+        return state;
+    }
 };//end myReducer
 
 const myStore = createStore(myReducer);
