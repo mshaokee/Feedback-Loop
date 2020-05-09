@@ -44,6 +44,20 @@ buttonClick = () =>{
   console.log('in buttonClick', this.props.reduxState);
 }//end buttonClick
 
+
+/////can try doing individual info
+//POST
+submitBtn = (data) => {
+  console.log('SUBMIT BTN', data);
+  //POST request
+  axios.post('/api/information', data).then(response => {
+    console.log('in POST submitBtn', response);
+  }).catch(error => {
+    alert('Error submitting. please check console');
+    console.log(error);
+  })
+};//end submitBtn
+
 render() {
   //confirm that DB is connecting
   console.log('what DB has currently', this.state.feedback);
@@ -74,7 +88,8 @@ render() {
         <Route path="/review"
           render={(props) => <Review {...props}
             dispatch={this.props.dispatch} 
-            review={this.props.reduxState} />} />
+            // review={this.props.reduxState}
+            submitBtn={this.submitBtn} />} />
 
         <Route path="/feedback"
           render={(props) => <Feedback {...props}

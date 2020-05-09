@@ -1,12 +1,23 @@
 import React, { Component } from 'react';
 
 class Review extends Component {
+
+    // state = {
+    //     feeling: {...this.props.review.feeling},
+    //     understanding: {...this.props.review.feeling},
+    //     support: {...this.props.review.support},
+    //     comments: {...this.props.review.support}
+    // }
+
     componentDidMount() {
         console.log('Review Mounted', this.props.review);
     }
 
     handleClick = () => {
-        console.log('reviewPage Clicked');
+        console.log('reviewPage Clicked', this.props);
+        //POST through APP, but passed down
+        this.props.submitBtn(this.props.review.feeling);
+        //go to feedback page
         this.props.history.push('/feedback')
     };//end handleClick
 
