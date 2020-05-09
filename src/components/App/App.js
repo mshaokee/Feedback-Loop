@@ -88,7 +88,7 @@ render() {
         <Route path="/review"
           render={(props) => <Review {...props}
             dispatch={this.props.dispatch} 
-            // review={this.props.reduxState}
+            review={this.props.reduxState}
             submitBtn={this.submitBtn} />} />
 
         <Route path="/feedback"
