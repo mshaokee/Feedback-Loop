@@ -1,25 +1,37 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
+import {connect} from 'react-redux';
 import './App.css';
-import { HashRouter, Route, Link } from 'react-router-dom';
-import PageOne from '../PageOne/PageOne'
+import { HashRouter, Route} from 'react-router-dom';
+import Header from '../Header/Header'
+import PageOne from '../PageOne/PageOne';
+// import PageTwo from '../PageTwo/PageTwo';
+// import PageThree from '../PageThree/PageThree';
+// import PageFour from '../PageFour/PageFour';
+// import Review from '../Review/Review';
+// import Feedback from '../Feedback/Feedback';
+
 
 class App extends Component {
+
+  componentDidMount(){
+    console.log('componentDidMount', this.props);
+  }
+
   render() {
     return (
       <div className="App">
         <HashRouter>
-        <header className="App-header">
-          <h1 className="App-title">Feedback!</h1>
-          <h4><i>Don't forget it!</i></h4>
-        </header>
-        <PageOne />
-
-        
+        <Header />
+        <Route exact path="/"
+          render={(props) => <PageOne {...props}
+          dispatch={this.props.dispatch} />} />
         </HashRouter>
       </div>
     );//end return
   };//end render
 };//end class
 
-export default App;
+const reduxStateToProps = (reduxState) => ({reduxState});
+
+export default connect(reduxStateToProps)(App);
