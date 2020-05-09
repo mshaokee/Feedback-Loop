@@ -13,6 +13,9 @@ app.use(express.static('build'));
 const informationRouter = require('./routes/information.router');
 app.use('/api/information', informationRouter)
 
+//POST ROUTE
+const submitRouter = require('./routes/submit.router');
+app.use('/api/information', submitRouter);
 
 
 /** ---------- START SERVER ---------- **/

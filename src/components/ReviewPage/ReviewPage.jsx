@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 
 class Review extends Component {
 
+    //create stay so you can target back in redux
     // state = {
     //     feeling: {...this.props.review.feeling},
-    //     understanding: {...this.props.review.feeling},
+    //     understanding: {...this.props.review.understanding},
     //     support: {...this.props.review.support},
-    //     comments: {...this.props.review.support}
+    //     comments: {...this.props.review.comments}
     // }
 
     componentDidMount() {
@@ -16,7 +17,11 @@ class Review extends Component {
     handleClick = () => {
         console.log('reviewPage Clicked', this.props);
         //POST through APP, but passed down
-        this.props.submitBtn(this.props.review.feeling);
+        // this.props.submitBtn(this.state);
+        this.props.dispatch({
+            type: 'submit',
+            // payload: this.state
+        })
         //go to feedback page
         this.props.history.push('/feedback')
     };//end handleClick

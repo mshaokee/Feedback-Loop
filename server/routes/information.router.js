@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
         console.log('Error GET /information');
         res.sendStatus(500);
     });//end query
-});//end app.get
+});//end GET
 
 
 module.exports = router;
