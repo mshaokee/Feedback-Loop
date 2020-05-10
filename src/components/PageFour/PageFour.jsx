@@ -42,7 +42,9 @@ class PageFour extends Component {
                 <h1>Any comments you want to leave?</h1>
                 <TextField onChange={(event) => this.handleChange(event, 'comments')} type="text" placeholder="Comments?" />
                 <Button variant="outlined" onClick={this.handleClick}>Next</Button>
+                <div>
                 <Button variant="outlined" onClick={this.goBack}>Go Back</Button>
+                </div>
             </div>
         );//end return
     };//end render

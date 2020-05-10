@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import AdminData from '../AdminData/AdminData'
+import './Admin.css'
 
 class Admin extends Component {
+
+    //button to take you back home
+    goHome = () =>{
+        this.props.history.push('/')
+    };//end gohome
 
     render() {
         return (
             <div>
                 <h1>Feedback Results</h1>
-                <table>
+                <table className="table">
                     <thead>
                         <tr>
                             <th>Feeling</th>
@@ -31,6 +37,9 @@ class Admin extends Component {
                         })}
                     </tbody>
                 </table>
+                <div>
+                    <button onClick={this.goHome}>Enter Feedbacks</button>
+                </div>
             </div>
         );//end return
     };//end render

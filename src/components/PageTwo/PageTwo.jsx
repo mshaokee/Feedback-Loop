@@ -46,7 +46,9 @@ class PageTwo extends Component {
                 <h1>How well are you understanding the content?</h1>
                 <TextField onChange={(event) => this.handleChange(event, 'understand')} type="number" placeholder="Understanding?" />
                 <Button variant="outlined" onClick={this.handleClick}>Next</Button>
+                <div>
                 <Button variant="outlined" onClick={this.goBack}>Go Back</Button>
+                </div>
             </div>
         );//end return
     };//end render

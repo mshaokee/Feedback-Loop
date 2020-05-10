@@ -45,7 +45,9 @@ class PageThree extends Component {
                 <h1>How well are you being supported?</h1>
                 <TextField onChange={(event) => this.handleChange(event, 'support')} type="number" placeholder="Supported?" />
                 <Button variant="outlined" onClick={this.handleClick}>Next</Button>
+                <div>
                 <Button variant="outlined" onClick={this.goBack}>Go Back</Button>
+                </div>
             </div>
         );//end return
     };//end render
