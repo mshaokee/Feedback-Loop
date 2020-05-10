@@ -47,7 +47,7 @@ const myReducer = (state = reducerInitialState, action) => {
         }).catch((error) => {
             alert('Error Post redux');
             console.log(error);
-        });//end axios  
+        });//end axios   
     } else if(action.type === 'reset'){
         console.log('reset data');
         return state;
