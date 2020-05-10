@@ -10,6 +10,7 @@ import PageThree from '../PageThree/PageThree';
 import PageFour from '../PageFour/PageFour';
 import Review from '../ReviewPage/ReviewPage';
 import Feedback from '../Feedback/Feedback';
+import Admin from '../Admin/Admin';
 
 
 class App extends Component {
@@ -66,7 +67,7 @@ render() {
     <div className="App">
       {/* NEED HASHROUTER TO WRAP MY ROUTES */}
       <HashRouter>
-        <Header />
+        <Route render={(props) => <Header {...props} />} />
         {/* <button onClick={this.buttonClick}>check</button> */}
         {/* WHEN DIRECTING PATH WITH DISPATCH, SET PROPS */}
         <Route exact path="/"
@@ -94,6 +95,10 @@ render() {
         <Route path="/feedback"
           render={(props) => <Feedback {...props}
             dispatch={this.props.dispatch} />} />
+
+        <Route path="/admin"
+          render={(props) => <Admin {...props}
+        dispatch={this.props.dispatch} />} />
       </HashRouter>
     </div>
   );//end return
