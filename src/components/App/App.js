@@ -39,10 +39,10 @@ class App extends Component {
 
 };//end getFeedback
 
-// //need to verify my current redux state
-buttonClick = () =>{
-  console.log('in buttonClick', this.props.reduxState);
-}//end buttonClick
+// // //need to verify my current redux state
+// buttonClick = () =>{
+//   console.log('in buttonClick', this.props.reduxState);
+// }//end buttonClick
 
 
 /////can try doing individual info
@@ -60,14 +60,14 @@ submitBtn = (data) => {
 
 render() {
   //confirm that DB is connecting
-  console.log('what DB has currently', this.state.feedback);
+  // console.log('what DB has currently', this.state.feedback);
 
   return (
     <div className="App">
       {/* NEED HASHROUTER TO WRAP MY ROUTES */}
       <HashRouter>
         <Header />
-        <button onClick={this.buttonClick}>check</button>
+        {/* <button onClick={this.buttonClick}>check</button> */}
         {/* WHEN DIRECTING PATH WITH DISPATCH, SET PROPS */}
         <Route exact path="/"
           render={(props) => <PageOne {...props}
