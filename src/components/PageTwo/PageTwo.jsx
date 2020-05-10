@@ -32,12 +32,21 @@ class PageTwo extends Component {
         })
     };//end handleChange
     
+    goBack = () => {
+        console.log('going back');
+        this.props.dispatch({
+            type: 'goBackOne'
+        })
+        this.props.history.push('/')
+    };// end goBack
+    
     render() {
         return (
             <div>
                 <h1>How well are you understanding the content?</h1>
                 <input onChange={(event) => this.handleChange(event, 'understand')} type="number" placeholder="Understanding?" />
                 <button onClick={this.handleClick}>Next</button>
+                <button onClick={this.goBack}>Go Back</button>
             </div>
         );//end return
     };//end render

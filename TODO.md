@@ -35,3 +35,6 @@
 [x] -on click, send to redux
 [x] -if statement, POST to DB
 [x] -feedback reset info
+
+## STRETCH UPDATE SCORES
+[] -button that links to previous page and removes that pages data
