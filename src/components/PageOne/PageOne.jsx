@@ -48,7 +48,7 @@ class PageOne extends Component {
                 <h1>How are you feeling today?</h1>
                 <TextField onChange={(event) => this.handleChange(event, 'feeling')} type="number" placeholder="Feeling?"/>
                 <Button variant="outlined" onClick={this.handleClick}>Next</Button>
-                
+            
             </div>
         );//end return
     };//end render

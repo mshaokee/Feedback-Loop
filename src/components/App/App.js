@@ -59,15 +59,21 @@ submitBtn = (data) => {
   })
 };//end submitBtn
 
+deleteHandle = () => {
+  console.log('DELETE');
+};//end deleteHandle
+
 render() {
   //confirm that DB is connecting
-  // console.log('what DB has currently', this.state.feedback);
+  console.log('what DB has currently', this.state.feedback);
 
   return (
     <div className="App">
       {/* NEED HASHROUTER TO WRAP MY ROUTES */}
       <HashRouter>
-        <Route render={(props) => <Header {...props} />} />
+        <Route render={(props) => <Header {...props}
+          dispatch={this.props.dispatch}
+           />} />
         {/* <button onClick={this.buttonClick}>check</button> */}
         {/* WHEN DIRECTING PATH WITH DISPATCH, SET PROPS */}
         <Route exact path="/"
@@ -98,7 +104,9 @@ render() {
 
         <Route path="/admin"
           render={(props) => <Admin {...props}
-        dispatch={this.props.dispatch} />} />
+            feedback={this.state.feedback}
+            deleteHandle={this.deleteHandle}
+            dispatch={this.props.dispatch} />} />
       </HashRouter>
     </div>
   );//end return
