@@ -20,12 +20,12 @@ class Admin extends Component {
                     <tbody>   
                             {this.props.feedback.map((info) => {
                             return (
-                                <tr>
+                                <tr key={info.id}>
                                     <td>{info.feeling}</td>
                                     <td>{info.feeling}</td>
                                     <td>{info.feeling}</td>
                                     <td>{info.feeling}</td>
-                                    <button>delete</button>
+                                    <td onClick={this.props.deleteHandle}><button>delete</button></td>
                                 </tr>
                             )//end return
                             })}

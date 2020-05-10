@@ -59,8 +59,14 @@ submitBtn = (data) => {
   })
 };//end submitBtn
 
-deleteHandle = () => {
+deleteHandle = (data) => {
   console.log('DELETE');
+  axios.delete(`/information/${data}`).then(response => {
+    this.getFeedback();
+  }).catch(error => {
+    alert('error deleting, check console')
+    console.log(error);
+  });
 };//end deleteHandle
 
 render() {
