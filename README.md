@@ -66,7 +66,13 @@ This project took me about 6 hours for it's current state. In this project we ha
 
 ## BUILT WITH
 
-* Javascript * React * React-Redux * HTML * CSS * Axios * Material UI 
+* Javascript 
+* React
+* React-Redux 
+* HTML 
+* CSS 
+* Material UI 
+* Axios 
 
 ## Acknowledgement
 
