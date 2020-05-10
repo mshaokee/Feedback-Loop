@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
+import { TextField } from '@material-ui/core';
 
 class PageFour extends Component {
 
@@ -38,9 +40,9 @@ class PageFour extends Component {
         return (
             <div>
                 <h1>Any comments you want to leave?</h1>
-                <input onChange={(event) => this.handleChange(event, 'comments')} type="text" placeholder="Comments?" />
-                <button onClick={this.handleClick}>Next</button>
-                <button onClick={this.goBack}>Go Back</button>
+                <TextField onChange={(event) => this.handleChange(event, 'comments')} type="text" placeholder="Comments?" />
+                <Button variant="outlined" onClick={this.handleClick}>Next</Button>
+                <Button variant="outlined" onClick={this.goBack}>Go Back</Button>
             </div>
         );//end return
     };//end render

@@ -40,9 +40,9 @@ class App extends Component {
 };//end getFeedback
 
 // // //need to verify my current redux state
-buttonClick = () =>{
-  console.log('in buttonClick', this.props.reduxState);
-}//end buttonClick
+// buttonClick = () =>{
+//   console.log('in buttonClick', this.props.reduxState);
+// }//end buttonClick
 
 
 /////can try doing individual info
@@ -67,7 +67,7 @@ render() {
       {/* NEED HASHROUTER TO WRAP MY ROUTES */}
       <HashRouter>
         <Header />
-        <button onClick={this.buttonClick}>check</button>
+        {/* <button onClick={this.buttonClick}>check</button> */}
         {/* WHEN DIRECTING PATH WITH DISPATCH, SET PROPS */}
         <Route exact path="/"
           render={(props) => <PageOne {...props}

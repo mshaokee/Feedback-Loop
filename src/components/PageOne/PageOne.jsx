@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Button} from '@material-ui/core';
+import {TextField} from '@material-ui/core';
 
 
 class PageOne extends Component {
@@ -41,10 +43,9 @@ class PageOne extends Component {
         // console.log(this.state);
         return (
             <div>
-                <h1>On a scale of 1 through 10, reflect upon the following questions.</h1>
                 <h1>How are you feeling today?</h1>
-                <input onChange={(event) => this.handleChange(event, 'feeling')} type="number" placeholder="Feeling?"/>
-                <button onClick={this.handleClick}>Next</button>
+                <TextField onChange={(event) => this.handleChange(event, 'feeling')} type="number" placeholder="Feeling?"/>
+                <Button variant="outlined" onClick={this.handleClick}>Next</Button>
             </div>
         );//end return
     };//end render

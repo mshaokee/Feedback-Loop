@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
+import { TextField } from '@material-ui/core';
 
 class PageThree extends Component {
 
@@ -41,9 +43,9 @@ class PageThree extends Component {
         return (
             <div>
                 <h1>How well are you being supported?</h1>
-                <input onChange={(event) => this.handleChange(event, 'support')} type="number" placeholder="Supported?" />
-                <button onClick={this.handleClick}>Next</button>
-                <button onClick={this.goBack}>Go Back</button>
+                <TextField onChange={(event) => this.handleChange(event, 'support')} type="number" placeholder="Supported?" />
+                <Button variant="outlined" onClick={this.handleClick}>Next</Button>
+                <Button variant="outlined" onClick={this.goBack}>Go Back</Button>
             </div>
         );//end return
     };//end render

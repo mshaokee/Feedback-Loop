@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
+
 
 class Feedback extends Component {
     componentDidMount() {
@@ -18,7 +20,7 @@ class Feedback extends Component {
         return (
             <div>
                 <h1>Feedback</h1>
-                <button onClick={this.handleClick}>Leave New Feedback</button>
+                <Button variant="outlined" onClick={this.handleClick}>Leave New Feedback</Button>
             </div>
         );//end return
     };//end render

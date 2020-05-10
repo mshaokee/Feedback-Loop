@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
+
 
 class Review extends Component {
 
@@ -26,7 +28,7 @@ class Review extends Component {
                 <h3>Understanding: {this.props.review.understanding}</h3>
                 <h3>Support: {this.props.review.support}</h3>
                 <h3>Comments: {this.props.review.comments}</h3>
-                <button onClick={this.handleClick}>Submit</button>
+                <Button variant="outlined" onClick={this.handleClick}>Submit</Button>
             </div>
         );//end return
     };//end render
