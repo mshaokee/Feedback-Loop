@@ -1,6 +1,7 @@
 ## BASIC SET UP
 [x] -npm install, npm install react-redux, react-router-dom
 [x] -organize basic folders
+[x] -setup database
 [x] -set up redux
 
 ## CREATE PAGES
@@ -39,3 +40,7 @@
 ## STRETCH UPDATE SCORES
 [x] -button that links to previous page and removes that pages data
 [x] -push history to previous link
+
+## MATERIAL UI
+[x] -npm install @material-ui/core
+[x] -import Button and TextField
