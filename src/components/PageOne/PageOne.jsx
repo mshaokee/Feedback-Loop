@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Button} from '@material-ui/core';
 import {TextField} from '@material-ui/core';
 // import {Card} from '@material-ui/core';
+// import './PageOneStyle.css';
 
 
 class PageOne extends Component {
@@ -47,7 +48,7 @@ class PageOne extends Component {
                 <h1>How are you feeling today?</h1>
                 <TextField onChange={(event) => this.handleChange(event, 'feeling')} type="number" placeholder="Feeling?"/>
                 <Button variant="outlined" onClick={this.handleClick}>Next</Button>
-                {/* <Card variant="outlined">HELLO</Card> */}
+                {/* <Card addClass="my-card" variant="outlined">HELLO</Card> */}
             </div>
         );//end return
     };//end render

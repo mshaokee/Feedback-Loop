@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button } from '@material-ui/core';
 
 
+
 class Feedback extends Component {
     componentDidMount() {
         console.log('Feedback Mounted');
@@ -20,6 +21,7 @@ class Feedback extends Component {
         return (
             <div>
                 <h1>Feedback</h1>
+                <h2>Success! Thank You!</h2>
                 <Button variant="outlined" onClick={this.handleClick}>Leave New Feedback</Button>
             </div>
         );//end return
