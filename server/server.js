@@ -17,6 +17,10 @@ app.use('/api/information', informationRouter)
 const submitRouter = require('./routes/submit.router');
 app.use('/api/information', submitRouter);
 
+//DELETE ROUTE
+const deleteRouter = require('./routes/delete.router');
+app.use('/api/information', deleteRouter);
+
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT, () => {

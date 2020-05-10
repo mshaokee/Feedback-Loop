@@ -59,12 +59,13 @@ submitBtn = (data) => {
   })
 };//end submitBtn
 
-deleteHandle = (data) => {
-  console.log('DELETE');
-  axios.delete(`/information/${data}`).then(response => {
+deleteHandle = (data) => { //deleteHandle sent down Admin
+  console.log('DELETE', data);
+  //DELETE axios
+  axios.delete(`/api/information/${data}`).then(response => {
     this.getFeedback();
   }).catch(error => {
-    alert('error deleting, check console')
+    alert('Error deleting, check console')
     console.log(error);
   });
 };//end deleteHandle
