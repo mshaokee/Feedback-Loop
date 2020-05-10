@@ -20,7 +20,7 @@ class PageFour extends Component {
     };//end handleClick
 
     handleChange = (event, property) => {
-        console.log('in handleChange PAGE TWO', event.target.value);
+        console.log('in handleChange PAGE FOUR', event.target.value);
         //change state
         this.setState({
             ...this.state.comments,

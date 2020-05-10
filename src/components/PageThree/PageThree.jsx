@@ -24,7 +24,7 @@ class PageThree extends Component {
     };//end handleClick
 
     handleChange = (event, property) => {
-        console.log('in handleChange PAGE TWO', event.target.value);
+        console.log('in handleChange PAGE THREE', event.target.value);
         //change state
         this.setState({
             ...this.state.support,

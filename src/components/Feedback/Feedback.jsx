@@ -7,6 +7,7 @@ class Feedback extends Component {
 
     handleClick = () => {
         console.log('Feedback Clicked');
+        //make sure data goes to redux using type, also pushing
         this.props.dispatch({
             type: 'reset'
         })
@@ -17,7 +18,6 @@ class Feedback extends Component {
         return (
             <div>
                 <h1>Feedback</h1>
-               
                 <button onClick={this.handleClick}>Leave New Feedback</button>
             </div>
         );//end return
