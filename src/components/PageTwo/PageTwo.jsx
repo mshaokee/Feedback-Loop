@@ -33,11 +33,8 @@ class PageTwo extends Component {
     };//end handleChange
     
     goBack = () => {
-        console.log('going back');
-        this.props.dispatch({
-            type: 'goBackOne'
-        })
-        this.props.history.push('/')
+        //pushes to previous page 
+        this.props.history.push('/');
     };// end goBack
     
     render() {

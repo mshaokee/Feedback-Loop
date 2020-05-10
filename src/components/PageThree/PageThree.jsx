@@ -32,12 +32,18 @@ class PageThree extends Component {
         })
     };//end handleChange
 
+    goBack = () => {
+        console.log('going back');
+        this.props.history.push('/pagetwo');
+    };// end goBack
+
     render() {
         return (
             <div>
                 <h1>How well are you being supported?</h1>
                 <input onChange={(event) => this.handleChange(event, 'support')} type="number" placeholder="Supported?" />
                 <button onClick={this.handleClick}>Next</button>
+                <button onClick={this.goBack}>Go Back</button>
             </div>
         );//end return
     };//end render

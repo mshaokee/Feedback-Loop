@@ -51,9 +51,6 @@ const myReducer = (state = reducerInitialState, action) => {
     } else if(action.type === 'reset'){
         console.log('reset data');
         return state;
-    } else if (action.type === 'goBackOne'){
-        console.log('going back one page');
-        return state.feeling;
     }
 };//end myReducer
 

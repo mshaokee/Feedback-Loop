@@ -28,12 +28,19 @@ class PageFour extends Component {
         })
     };//end handleChange
 
+    goBack = () => {
+        console.log('going back');
+        this.props.history.push('/pagethree');
+    };// end goBack
+
+
     render() {
         return (
             <div>
                 <h1>Any comments you want to leave?</h1>
                 <input onChange={(event) => this.handleChange(event, 'comments')} type="text" placeholder="Comments?" />
                 <button onClick={this.handleClick}>Next</button>
+                <button onClick={this.goBack}>Go Back</button>
             </div>
         );//end return
     };//end render

@@ -37,4 +37,5 @@
 [x] -feedback reset info
 
 ## STRETCH UPDATE SCORES
-[] -button that links to previous page and removes that pages data
+[x] -button that links to previous page and removes that pages data
+[x] -push history to previous link
