@@ -44,6 +44,7 @@ class PageOne extends Component {
         // console.log(this.state);
         return (
             <div>
+                <h2>On a scale of 1 through 10, reflect upon the following questions.</h2>
                 <h1>How are you feeling today?</h1>
                 <TextField onChange={(event) => this.handleChange(event, 'feeling')} type="number" placeholder="Feeling?"/>
                 <Button variant="outlined" onClick={this.handleClick}>Next</Button>
