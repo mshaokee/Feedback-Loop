@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from '@material-ui/core';
 
 class AdminData extends Component {
 
@@ -18,7 +19,7 @@ class AdminData extends Component {
                     <td>{this.props.info.understanding}</td>
                     <td>{this.props.info.support}</td>
                     <td>{this.props.info.comments}</td>
-                    <td onClick={this.deleteData}><button>delete</button></td>
+                    <td onClick={this.deleteData}><Button variant="outlined">delete</Button></td>
                 </tr>
             </>
         );//end return
@@ -26,3 +27,4 @@ class AdminData extends Component {
 };//end class
 
 export default AdminData;
+

@@ -40,11 +40,10 @@ class App extends Component {
 
 };//end getFeedback
 
-// // //need to verify my current redux state
+// //need to verify my current redux state
 // buttonClick = () =>{
 //   console.log('in buttonClick', this.props.reduxState);
 // }//end buttonClick
-
 
 /////can try doing individual info
 //POST
@@ -53,6 +52,7 @@ submitBtn = (data) => {
   //POST request
   axios.post('/api/information', data).then(response => {
     console.log('in POST submitBtn', response);
+    this.getFeedback();
   }).catch(error => {
     alert('Error submitting. please check console');
     console.log(error);

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AdminData from '../AdminData/AdminData'
 import './Admin.css'
+import { Button } from '@material-ui/core';
 
 class Admin extends Component {
 
@@ -38,7 +39,7 @@ class Admin extends Component {
                     </tbody>
                 </table>
                 <div>
-                    <button onClick={this.goHome}>Enter Feedbacks</button>
+                    <Button variant="outlined" onClick={this.goHome}>Enter Feedbacks</Button>
                 </div>
             </div>
         );//end return

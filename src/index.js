@@ -21,7 +21,7 @@ const myReducer = (state = reducerInitialState, action) => {
     if (action.type === 'feeling') {
         console.log('in myReducer feeling: ', action.payload);
         // return feeling to change directly
-        return { feeling: action.payload };
+        return { ...state, feeling: action.payload };
     } else if (action.type === 'understand') {
         console.log('in myReducer understanding:', action.payload);
         //spread to not mutate and directly change understanding through return
@@ -52,6 +52,8 @@ const myReducer = (state = reducerInitialState, action) => {
         console.log('reset data');
         return state;
     }
+    //must return something
+    return state;
 };//end myReducer
 
 const myStore = createStore(myReducer);
