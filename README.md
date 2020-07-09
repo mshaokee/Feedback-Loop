@@ -16,55 +16,28 @@ This project took me about 6 hours for it's current state. In this project we ha
 
 ![](images/pic1.PNG)
 
-# Installation
+## Prerequisites 
 
-#### BASIC SET UP
-[x] -npm install, npm install react-redux, react-router-dom
-[x] -organize basic folders
-[x] -setup database
-[x] -set up redux
+Software required to run this application
 
-#### CREATE PAGES
-[x] -create components, page 1, 2, 3, 4, review, feedback
-[x] -import into app.js
+* [Node.js](https://nodejs.org/en/)
+* [PostgreSQL](https://www.postgresql.org/)
+* [Nodemon](https://nodemon.io/)
 
-#### SET UP APP
-[x] -set up hashrouters making sure to import
-[x] -render props that way you can link through next buttons
-[x] -set up connect and reduxState
-[x] -setup state for feedback for GET
-[x] -GET func to display current postico data
-[x] -GET server side set up with route
+## Installation
 
-#### SET UP PAGES
-[x] -component basics, set up next click and input fields
-[x] -handleClick makes links move correctly
+1.) Create a database named ```prime_feedback``` using the [data.sql](https://github.com/mshaokee/Feedback-Loop/blob/master/data.sql) file
+2.) Run ```npm install``` in the terminal
+3.) Run ```npm run server``` in the terminal
+4.) Run ```npm run client``` in the terminal to open a new browser to view the application
 
-#### REDUX / PAGES
-[x] -set initial state to objects of page responses
-[x] -set Store and Provider basics
-[x] -Page One set up with handleChange for type and property
-    [x] -make sure properties are 1-10
-[x] -have dispatch sent through APP, to PAGES to send back type and action
-[x] -REDUX set up if statements, change redux state with return
-[x] -repeat steps pages 1-4
+## Usage
 
-#### REVIEW / FEEDBACK
-[x] -send reduxState down to review
-[x] -display all current reduxState's
-[x] -on click, send to redux
-[x] -if statement, POST to DB
-[x] -feedback reset info
+1.) Fill the form by entering information into the inputs then clicking Next
+2.) You have the ability to go back once you've clicked Next
+3.) You have the ability to leave new feedback once finished taking you to the beginning of the form
 
-#### STRETCH UPDATE SCORES
-[x] -button that links to previous page and removes that pages data
-[x] -push history to previous link
-
-#### MATERIAL UI
-[x] -npm install @material-ui/core
-[x] -import Button and TextField
-
-## BUILT WITH
+## Built with
 
 * Javascript 
 * React
